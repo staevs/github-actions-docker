@@ -1,0 +1,9 @@
+services:
+  runner:
+    image: github-actions-runner
+    privileged: true
+    build:
+      context: .
+      args:
+        RUNNER_VERSION: 2.298.2
+    env_file: ./variables.env
